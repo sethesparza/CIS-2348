@@ -2,7 +2,6 @@
 
 print("Birthday Calculator")
 
-
 print("Current date:")
 
 print("What is today's date?") #Previous 3 lines to help format the program more efficiently
@@ -18,7 +17,6 @@ bday = int(input("Day?"))
 bmonth = int(input("Month?"))
 byear = int(input("Year?"))
 
-
 age = 2021 - int(byear) 
 
 print("Your age is:", age)
@@ -31,6 +29,50 @@ else:
     print('')
 
 #End of Homework 1
+
+
+
+
+
+#ZyLab Homework Part 1
+
+userNum = int(input())
+userNumSquared = userNum * userNum # Bug here; fix it when instructed
+
+print(userNumSquared) # Output formatting issue here; fix it when instructed
+
+#End of ZyLab Homework Part 1
+
+
+
+
+#Zylab Homework Part 2
+
+user_num1 = int(input("Enter integer:"))
+
+print("You entered:", user_num1)
+
+squared = user_num1 * user_num1
+cubed = user_num1 * user_num1 * user_num1
+
+print(user_num1, "squared is", squared)
+print("And", user_num1, "cubed is", cubed)
+
+user_num2 = int(input("Enter another integer:"))
+
+addition = user_num1 + user_num2
+multi = user_num1 * user_num2
+
+print(user_num1, "+", user_num2, 'is', addition)
+print(user_num1, '*', user_num2, 'is', multi)
+
+#End of ZyLab Homework Part 2
+
+
+
+
+#Zylab Homework Part 3 
+
 
 
 
