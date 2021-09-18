@@ -1,0 +1,30 @@
+lemon_juice = int(input('Enter amount of lemon juice (in cups):'"\n"))
+
+water = int(input('Enter amount of water (in cups):'"\n"))
+
+agave = float(input('Enter amount of agave nectar (in cups):'"\n"))
+
+servings = int(input('How many servings does this make?'"\n"))
+print('')
+print("Lemonade ingredients - yields", '{:.2f}'.format(servings), 'servings')
+print('{:.2f}'.format(lemon_juice), 'cup(s) lemon juice')
+print('{:.2f}'.format(water), 'cup(s) water')
+print('{:.2f}'.format(agave), 'cup(s) agave nectar')
+print('')                                                                                   #End of part A
+desire = int(input('How many servings would you like to make?'"\n"))
+print('')
+print("Lemonade ingredients - yields", '{:.2f}'.format(desire), 'servings')
+mul = desire // servings
+
+print('{:.2f}'.format(lemon_juice * mul), "cup(s) lemon juice")
+print('{:.2f}'.format(water * mul), "cup(s) water")
+print('{:.2f}'.format(agave * mul), "cup(s) agave nectar"'\n')                                  #End of part B
+
+gallon_lemon = lemon_juice * mul / 16
+gallon_water = water * mul / 16
+gallon_agave = agave * mul / 16
+
+print("Lemonade ingredients - yields", '{:.2f}'.format(desire), 'servings')
+print('{:.2f}'.format(gallon_lemon), "gallon(s) lemon juice")
+print('{:.2f}'.format(gallon_water), "gallon(s) water")
+print('{:.2f}'.format(gallon_agave), "gallon(s) agave nectar")
