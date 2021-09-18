@@ -1,0 +1,29 @@
+print("Birthday Calculator")
+
+
+print("Current date:")
+
+print("What is today's date?")
+
+day = input("Day?")
+month = input("Month?")
+year = input("Year?")
+
+print("Birthday:")
+
+print("When is your birthday?")
+bday = input("Day?")
+bmonth = input("Month?")
+byear = input("Year?")
+
+
+age = 2021 - int(byear)
+
+print("Your age is:", age)
+
+updated_age = age + 1
+
+if day == bday and month == bmonth:
+    print("Happy Birthday! You are now", updated_age, "years old!")
+else:
+    print('')
