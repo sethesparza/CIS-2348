@@ -1,23 +1,25 @@
+#Homework 1
+
 print("Birthday Calculator")
 
 
 print("Current date:")
 
-print("What is today's date?")
+print("What is today's date?") #Previous 3 lines to help format the program more efficiently
 
-day = input("Day?")
-month = input("Month?")
-year = input("Year?")
+day = int(input("Day?")) #Taking integer inputs so inputs are not interpreted as strings
+month = int(input("Month?"))
+year = int(input("Year?"))
 
 print("Birthday:")
 
 print("When is your birthday?")
-bday = input("Day?")
-bmonth = input("Month?")
-byear = input("Year?")
+bday = int(input("Day?"))
+bmonth = int(input("Month?"))
+byear = int(input("Year?"))
 
 
-age = 2021 - int(byear)
+age = 2021 - int(byear) 
 
 print("Your age is:", age)
 
@@ -27,3 +29,8 @@ if day == bday and month == bmonth:
     print("Happy Birthday! You are now", updated_age, "years old!")
 else:
     print('')
+
+#End of Homework 1
+
+
+
