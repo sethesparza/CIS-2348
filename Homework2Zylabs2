@@ -1,0 +1,29 @@
+x1_input = int(input())
+y1_input = int(input())
+z1_input = int(input())
+
+x2_input = int(input())
+y2_input = int(input())
+z2_input = int(input())
+
+def first_equation(x, y):
+    return (x1_input * x) + (y1_input * y) - z1_input
+
+def second_equation(x , y):
+    return (x2_input * x) + (y2_input * y) - z2_input
+
+x = 100
+y = 100
+
+for i in range(-10, 11):
+    for j in range(-10, 11):
+        if first_equation(i, j) == second_equation(i, j) and first_equation(i, j) == 0:
+            x = i
+            y = j
+
+if x != 100:
+    print(x, y)
+else:
+    print("No solution")
+
+    
