@@ -1,0 +1,16 @@
+password = input()
+
+for i in password:                                                                  #for loop so that each character in the string can be tested
+    if i == 'i':
+        password = password.replace('i', '!')
+    elif i == 'a':
+        password = password.replace('a', '@')
+    elif i == 'm':
+        password = password.replace('m', 'M')
+    elif i == 'B':
+        password = password.replace('B', '8')
+    elif i == 'o':
+        password = password.replace('o', '.')
+        
+print(password +'q*s', end='')                                                      
+print('')
