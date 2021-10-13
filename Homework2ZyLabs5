@@ -1,0 +1,17 @@
+import csv
+
+user_file = input()
+
+with open(user_file, 'r') as file:
+    reader = csv.reader(file, delimiter=',')
+    output = dict()
+
+    for i in reader:
+        for j in i:
+            if j in output:
+                output[j] = output[j] + 1
+            else:
+                output[j] = 1
+
+    for k in list(output.keys()):
+        print("{} {}".format(k, output[k]))
