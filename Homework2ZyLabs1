@@ -1,3 +1,5 @@
+Seth Esparza - 1861043
+
 password = input()
 
 for i in password:                                                                  #for loop so that each character in the string can be tested
