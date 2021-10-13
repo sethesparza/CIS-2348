@@ -1,3 +1,5 @@
+Seth Esparza - 1861043
+
 x1_input = int(input())
 y1_input = int(input())
 z1_input = int(input())
