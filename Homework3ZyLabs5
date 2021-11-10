@@ -1,0 +1,11 @@
+number = input()
+number_list = []
+
+for i in number.split(' '):
+
+    if int(i) >= 0:
+        number_list.append(int(i))
+        number_list.sort()
+
+for i in number_list:
+    print(x, end=' ')
