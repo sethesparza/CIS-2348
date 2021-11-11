@@ -1,0 +1,60 @@
+players = dict()
+
+def display(team, rating=1):
+    for i in sorted(team.keys()):
+        if team.get(i) >= rating:
+            print("Jersey number: {}, Rating: {}".format(i,team.get(i)))
+    print('')
+
+i = 1
+
+while i < 6:
+    try:
+        jersey_number = int(input("Enter player {}'s jersey number:\n".format(i)))
+        while True:
+            rating = int(input("Enter player {}'s rating:\n".format(i)))
+            print('')
+            if rating > 0 and rating <10:
+                break
+            else:
+                print("Rating must be a number between 1 and 9")
+        players[jersey_number] = rating
+        i += 1
+    except ValueError:
+        print("You have entered invalid values")
+
+print("ROSTER")
+display(players)
+
+while True:
+    print("MENU\na - Add player\nd - Remove player"+"\nu - Update player rating\nr - Output players above a rating\n"+"o - Output roster\nq - Quit\n")
+    choice = input("Choose an option:\n")
+    if choice == 'a':
+        jersey_number = int(input("Enter a new player's jersey number: "))
+        rating = int(input("Enter the player's rating: "))
+        players[jersey_number] = rating
+    elif choice == 'u':
+        jersey_number = int(input("Enter a jersey number: "))
+        try:
+            if players[jersey_number] > 0:
+                rating = int(input("Enter a new rating for player: "))
+                players[jersey_number] = rating
+        except KeyError:
+            print("Jersey number "+str(jersey_number)+" not found")
+    elif choice == 'd':
+        jersey_number = int(input("Enter a jersey number: "))
+        try:
+            del players[jersey_number]
+        except KeyError:
+            print("Jersey number "+str(jersey_number)+" does not exist")
+    elif choice == 'r':
+        rating = int(input("Enter a rating: "))
+        print("ABOVE", rating)
+        display(players, rating)
+    elif choice == 'o':
+        print("ROSTER")
+        display(players)
+    elif choice == 'q':
+        break
+    else:
+        print("You have entered invalid option")
