@@ -1,0 +1,11 @@
+user = input().split()
+name = user[0]
+
+while name != '-1':
+    try:
+        age = int(user[1]) + 1
+    except ValueError:
+        age = 0
+    print('{} {}'.format(name, age))
+    user = input().split()
+    name = user[0]
