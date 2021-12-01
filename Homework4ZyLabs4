@@ -1,0 +1,30 @@
+num_calls = 0
+
+def partition(user_ids, a, b):
+    pivot = user_ids[b]
+    index = a - 1
+    for i in range(a, b):
+        if user_ids[i] <= pivot:
+            index += 1
+            user_ids[index], user_ids[i] = user_ids[i], user_ids[index]
+    user_ids[index+1], user_ids[b] = user_ids[b], user_ids[index+1]
+    return index+1
+
+def quicksort(user_ids, a, b):
+    if a < b:
+        pivot = partition(user_ids, a, b)
+        quicksort(user_ids, a, pivot - 1)
+        quicksort(user_ids, pivot + 1, b)
+
+if __name__ == "__main__":
+    user_ids = []
+    user_id = input()
+    while user_id != "-1":
+        user_ids.append(user_id)
+        user_id = input()
+    quicksort(user_ids, 0, len(user_ids) - 1)
+    num_calls = int(2 * len(user_ids) - 1)
+    print(num_calls)
+    for user_id in user_ids:
+        print(user_id)
+        
