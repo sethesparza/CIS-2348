@@ -21,7 +21,7 @@ while True:
             types = i
 
     if(item == "" or types == ""):
-        print("No such item in invetory")
+        print("No such item in inventory")
     else:
         details = ["", "", "", 0]
 
@@ -35,7 +35,7 @@ while True:
                     details[2] = data["type"][i]
                     details[3] = data["price"][i]
 
-    print("Your item is " + str(details[0]) + " " + str(details[1]) + " " + str(details[2]) + " " + str(details[3]))
+    print("Your item is: " + str(details[0]) + " " + str(details[1]) + " " + str(details[2]) + " " + str(details[3]))
 
 #create a list to store the items
 
