@@ -46,7 +46,7 @@ while True:
             extra.append([data["id"][i], data["manufacturer"][i], data["type"][i], data["price"][i]])
 
     if(len(extra) != 0):
-        print("You may also like ")
+        print("You may, also, consider")
 
         for i in range(len(extra)):
         
